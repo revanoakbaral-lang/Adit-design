@@ -1,0 +1,1426 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d18">
+<title>ADIT DESIGN | Jasa Edit Profesional</title>
+
+<style>
+:root {
+  --bg: #080d18;
+  --panel: #101a2b;
+  --panel2: #14233a;
+  --blue: #1685ff;
+  --cyan: #54c8ff;
+  --white: #ffffff;
+  --muted: #a8b7ce;
+  --border: #263c59;
+  --green: #25d366;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #080d18ee;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  max-width: 1150px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--cyan);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 13px;
+  color: #d5e1f2;
+}
+
+.nav-links a:hover {
+  color: var(--cyan);
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: var(--blue);
+  color: white;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #0068db;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: #3975b9;
+}
+
+.btn-outline:hover {
+  background: #142d4c;
+}
+
+.btn-green {
+  background: #168e53;
+}
+
+.btn-small {
+  padding: 9px 12px;
+  font-size: 13px;
+}
+
+.hero {
+  min-height: 530px;
+  padding: 85px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, #1258a866, transparent 55%),
+    linear-gradient(180deg, #0b1527, var(--bg));
+}
+
+.hero-content {
+  max-width: 780px;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid #277bd0;
+  color: var(--cyan);
+  background: #0c2442;
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 8vw, 76px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.gradient-text {
+  color: var(--cyan);
+  text-shadow: 0 0 30px #1685ff44;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+  margin-top: 45px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 21px;
+  color: var(--cyan);
+}
+
+.stat span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+section {
+  padding: 65px 20px;
+}
+
+.section-wrap {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-head h2 {
+  font-size: clamp(26px, 5vw, 36px);
+  margin-bottom: 8px;
+}
+
+.section-head h2 span {
+  color: var(--cyan);
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  min-width: 0;
+  padding: 23px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: .25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue);
+}
+
+.service-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.price {
+  color: var(--cyan);
+  font-size: 21px;
+  font-weight: bold;
+  margin: 18px 0 12px;
+}
+
+.price small {
+  display: block;
+  font-size: 11px;
+  font-weight: normal;
+  color: var(--muted);
+}
+
+.card .btn {
+  width: 100%;
+}
+
+.alt-section {
+  background: #0b1220;
+  border-top: 1px solid #182a43;
+  border-bottom: 1px solid #182a43;
+}
+
+.portfolio-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.artwork {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 18px;
+  background:
+    radial-gradient(circle at 50% 30%, #177fe7, transparent 45%),
+    linear-gradient(135deg, #0a1427, #152e50);
+  border-bottom: 1px solid var(--border);
+}
+
+.artwork .art-icon {
+  font-size: 52px;
+  filter: drop-shadow(0 0 12px #1685ff99);
+}
+
+.artwork strong {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.artwork small {
+  color: var(--cyan);
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+
+.portfolio-info {
+  padding: 18px;
+}
+
+.portfolio-info p {
+  margin-top: 5px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stars {
+  color: #ffcc4d;
+  letter-spacing: 3px;
+}
+
+.quote {
+  font-size: 14px;
+  color: #d5e1f2;
+}
+
+.customer {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.order-layout {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.info-panel {
+  background:
+    radial-gradient(circle at top left, #174c84, transparent 65%),
+    var(--panel);
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.info-panel h3 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.info-panel p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.info-list {
+  margin-top: 22px;
+  display: grid;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.info-item span {
+  font-size: 23px;
+}
+
+.info-item small {
+  display: block;
+  color: var(--muted);
+}
+
+.form-panel {
+  padding: 25px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.form-panel h3 {
+  font-size: 23px;
+  margin-bottom: 18px;
+}
+
+.field {
+  margin-bottom: 17px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #e2ebf8;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 13px;
+  background: #080f1c;
+  color: white;
+  border: 1px solid #304562;
+  border-radius: 9px;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--blue);
+}
+
+input[type="file"] {
+  font-size: 12px;
+  padding: 10px;
+}
+
+input[type="file"]::file-selector-button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background: var(--blue);
+  color: white;
+  margin-right: 10px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.help {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 6px;
+}
+
+.preview {
+  display: none;
+  width: 100%;
+  max-width: 240px;
+  max-height: 240px;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-top: 12px;
+  background: #080d18;
+}
+
+.check-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 16px 0;
+}
+
+.check-row input {
+  width: auto;
+  margin-top: 4px;
+}
+
+.full {
+  width: 100%;
+}
+
+.form-note {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 12px;
+}
+
+.faq-list {
+  max-width: 760px;
+  margin: auto;
+}
+
+details {
+  padding: 17px;
+  margin-bottom: 10px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+details p {
+  color: var(--muted);
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+footer {
+  padding: 35px 20px;
+  text-align: center;
+  background: #050912;
+  border-top: 1px solid var(--border);
+}
+
+footer .logo {
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 17px;
+  z-index: 60;
+  width: 57px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+  color: white;
+  font-size: 29px;
+  border-radius: 50%;
+  box-shadow: 0 5px 25px #25d36655;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* DASHBOARD ADMIN */
+
+.admin-section {
+  background: #0b1220;
+}
+
+.admin-box {
+  max-width: 1000px;
+  margin: auto;
+  padding: 22px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+}
+
+.admin-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.admin-orders {
+  display: grid;
+  gap: 12px;
+}
+
+.order-record {
+  padding: 16px;
+  background: #080f1c;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+.order-record p {
+  color: #c4d2e5;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.order-record strong {
+  color: var(--cyan);
+}
+
+.admin-status {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.admin-login {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.danger {
+  background: #a9273b;
+}
+
+@media(max-width: 760px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .order-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 470px;
+    padding: 65px 17px;
+  }
+
+  section {
+    padding: 48px 15px;
+  }
+}
+
+@media(max-width: 430px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .stats {
+    gap: 22px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#home">ADIT <span>DESIGN.</span></a>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#portfolio">Portofolio</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#order">Order</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="tag">✦ CREATIVE DESIGN STUDIO</div>
+
+    <h1>YOUR IDEA.<br><span class="gradient-text">OUR DESIGN.</span></h1>
+
+    <p>
+      Jasa edit kreatif untuk logo gaming, poster,
+      foto, video, dan desain turnamen.
+      Wujudkan ide kamu bersama ADIT DESIGN.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#order" class="btn">🎨 Order Sekarang</a>
+      <a href="#portfolio" class="btn btn-outline">Lihat Portofolio</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <strong>6+</strong>
+        <span>Jenis Layanan</span>
+      </div>
+      <div class="stat">
+        <strong>24/7</strong>
+        <span>Form Order Online</span>
+      </div>
+      <div class="stat">
+        <strong>100%</strong>
+        <span>Kreatif & Custom</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYANAN -->
+
+<section id="layanan">
+  <div class="section-wrap">
+    <div class="section-head">
+      <h2>LAYANAN <span>KAMI</span></h2>
+      <p>Pilih jasa yang sesuai dengan kebutuhan desainmu.</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="service-icon">🎮</div>
+        <h3>Logo Gaming</h3>
+        <p>Logo esport, squad, clan, gaming, dan identitas tim.</p>
+        <div class="price">Rp10.000<small>Harga mulai dari</small></div>
+        <button class="btn" onclick="pilih('Edit Logo Gaming')">Pilih Layanan</button>
+      </article>
+
+      <article class="card">
+        <div class="service-icon">🖼️</div>
+        <h3>Poster Design</h3>
+        <p>Poster promosi, event, turnamen, dan media sosial.</p>
+        <div class="price">Rp10.000<small>Harga mulai dari</small></div>
+        <button class="btn" onclick="pilih('Edit Poster')">Pilih Layanan</button>
+      </article>
+
+      <article class="card">
+        <div class="service-icon">✨</div>
+        <h3>Photo Editing</h3>
+        <p>Manipulasi foto, efek cahaya, dan visual estetik.</p>
+        <div class="price">Rp5.000<small>Harga mulai dari</small></div>
+        <button class="btn" onclick="pilih('Edit Foto')">Pilih Layanan</button>
+      </article>
+
+      <article class="card">
+        <div class="service-icon">🎬</div>
+        <h3>Video Editing</h3>
+        <p>Montage gaming, cinematic, dan konten media sosial.</p>
+        <div class="price">Rp15.000<small>Harga mulai dari</small></div>
+        <button class="btn" onclick="pilih('Edit Video')">Pilih Layanan</button>
+      </article>
+
+      <article class="card">
+        <div class="service-icon">🏆</div>
+        <h3>Desain Turnamen</h3>
+        <p>Logo turnamen, poster pertandingan, dan event gaming.</p>
+        <div class="price">Rp15.000<small>Harga mulai dari</small></div>
+        <button class="btn" onclick="pilih('Desain Turnamen')">Pilih Layanan</button>
+      </article>
+
+      <article class="card">
+        <div class="service-icon">💎</div>
+        <h3>Custom Design</h3>
+        <p>Desain khusus sesuai ide, konsep, dan referensimu.</p>
+        <div class="price">Diskusi<small>Harga menyesuaikan desain</small></div>
+        <button class="btn" onclick="pilih('Custom Design')">Pilih Layanan</button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PORTOFOLIO -->
+
+<section class="alt-section" id="portfolio">
+  <div class="section-wrap">
+    <div class="section-head">
+      <h2>OUR <span>PORTFOLIO</span></h2>
+      <p>Contoh konsep visual untuk inspirasi desainmu.</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card portfolio-card">
+        <div class="artwork">
+          <div class="art-icon">⚡</div>
+          <strong>AD ESPORTS</strong>
+          <small>GAMING IDENTITY</small>
+        </div>
+        <div class="portfolio-info">
+          <h3>Gaming Logo</h3>
+          <p>Konsep logo gaming bergaya futuristik.</p>
+        </div>
+      </article>
+
+      <article class="card portfolio-card">
+        <div class="artwork">
+          <div class="art-icon">🏆</div>
+          <strong>TOURNAMENT</strong>
+          <small>COMPETE • WIN</small>
+        </div>
+        <div class="portfolio-info">
+          <h3>Event Poster</h3>
+          <p>Konsep visual promosi turnamen gaming.</p>
+        </div>
+      </article>
+
+      <article class="card portfolio-card">
+        <div class="artwork">
+          <div class="art-icon">✦</div>
+          <strong>CREATIVE FX</strong>
+          <small>PHOTO MANIPULATION</small>
+        </div>
+        <div class="portfolio-info">
+          <h3>Photo Editing</h3>
+          <p>Konsep visual efek cahaya dan warna.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="form-note" style="text-align:center;margin-top:20px">
+      Portofolio di atas adalah contoh konsep ilustratif,
+      bukan klaim hasil proyek pelanggan.
+      Kamu bisa menggantinya dengan hasil edit asli.
+    </p>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+
+<section id="testimoni">
+  <div class="section-wrap">
+    <div class="section-head">
+      <h2>TESTIMONI <span>PELANGGAN</span></h2>
+      <p>Bagian ulasan untuk membangun kepercayaan pelanggan.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="quote">
+          "Tempat untuk menampilkan ulasan pelanggan
+          tentang hasil desain dan pelayanan."
+        </p>
+        <div class="customer">— Nama Pelanggan 1</div>
+      </article>
+
+      <article class="card testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="quote">
+          "Tambahkan pengalaman pelanggan setelah
+          pesanan selesai dikerjakan."
+        </p>
+        <div class="customer">— Nama Pelanggan 2</div>
+      </article>
+
+      <article class="card testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="quote">
+          "Ganti teks ini dengan testimoni asli
+          yang sudah mendapat izin untuk ditampilkan."
+        </p>
+        <div class="customer">— Nama Pelanggan 3</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FORM ORDER -->
+
+<section class="alt-section" id="order">
+  <div class="section-wrap">
+    <div class="section-head">
+      <h2>ORDER <span>NOW</span></h2>
+      <p>Isi formulir dan kirim detail pesanan langsung ke WhatsApp.</p>
+    </div>
+
+    <div class="order-layout">
+      <aside class="info-panel">
+        <h3>Let's Make Something <span class="gradient-text">Amazing.</span></h3>
+        <p>
+          Punya ide desain? Ceritakan kebutuhanmu.
+          Kami akan membantu mengarahkan pesanan
+          ke layanan yang sesuai.
+        </p>
+
+        <div class="info-list">
+          <div class="info-item">
+            <span>📲</span>
+            <div>
+              <strong>WhatsApp Order</strong>
+              <small>+62 877-7147-5645</small>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span>🎨</span>
+            <div>
+              <strong>Custom Design</strong>
+              <small>Konsep sesuai permintaan</small>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span>📁</span>
+            <div>
+              <strong>Referensi Desain</strong>
+              <small>Pilih foto pendukung pesanan</small>
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="btn btn-green full"
+          style="margin-top:25px"
+          href="https://wa.me/6287771475645?text=Halo%20ADIT%20DESIGN%2C%20saya%20ingin%20bertanya%20tentang%20jasa%20edit."
+          target="_blank"
+          rel="noopener"
+        >Chat WhatsApp</a>
+      </aside>
+
+      <div class="form-panel">
+        <h3>Form Pemesanan</h3>
+
+        <form id="orderForm">
+          <div class="field">
+            <label for="nama">Nama Pemesan *</label>
+            <input id="nama" type="text" maxlength="80"
+              placeholder="Masukkan nama" required>
+          </div>
+
+          <div class="field">
+            <label for="layananPilih">Jenis Layanan *</label>
+            <select id="layananPilih" required>
+              <option value="">-- Pilih layanan --</option>
+              <option>Edit Logo Gaming</option>
+              <option>Edit Poster</option>
+              <option>Edit Foto</option>
+              <option>Edit Video</option>
+              <option>Desain Turnamen</option>
+              <option>Custom Design</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="detail">Detail Pesanan *</label>
+            <textarea id="detail" maxlength="1500"
+              placeholder="Warna, tulisan, ukuran, konsep, dan lainnya..."
+              required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="budget">Budget *</label>
+            <select id="budget" required>
+              <option value="">-- Pilih budget --</option>
+              <option>Rp5.000–Rp10.000</option>
+              <option>Rp10.000–Rp25.000</option>
+              <option>Rp25.000–Rp50.000</option>
+              <option>Di atas Rp50.000</option>
+              <option>Diskusi dahulu</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="referensi">Upload Foto Referensi (opsional)</label>
+            <input id="referensi" type="file"
+              accept="image/jpeg,image/png,image/webp">
+            <small class="help">
+              Format JPG, PNG, atau WebP. Maksimal 5 MB.
+            </small>
+            <img id="preview" class="preview" alt="Preview foto referensi">
+            <button type="button" id="hapusFoto"
+              class="btn btn-outline btn-small hidden"
+              style="margin-top:10px">Hapus Foto</button>
+          </div>
+
+          <label class="check-row">
+            <input type="checkbox" id="persetujuan" required>
+            <span>
+              Saya setuju mengirim informasi pesanan ke WhatsApp
+              dan menyimpan salinan pesanan secara lokal di browser ini.
+            </span>
+          </label>
+
+          <button class="btn full" type="submit">
+            📲 KIRIM ORDER VIA WHATSAPP
+          </button>
+
+          <p class="form-note">
+            Foto yang dipilih tidak ikut terkirim otomatis melalui
+            WhatsApp. Setelah WhatsApp terbuka, lampirkan foto
+            secara manual di chat. Hindari mengunggah foto sensitif.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+
+<section>
+  <div class="section-wrap">
+    <div class="section-head">
+      <h2>FAQ <span>ORDER</span></h2>
+      <p>Informasi sebelum memesan jasa edit.</p>
+    </div>
+
+    <div class="faq-list">
+      <details>
+        <summary>Bagaimana cara memesan?</summary>
+        <p>Pilih layanan, isi detail pesanan, lalu tekan tombol
+        kirim order untuk membuka WhatsApp.</p>
+      </details>
+
+      <details>
+        <summary>Apakah harga bisa berubah?</summary>
+        <p>Harga pada website merupakan harga awal. Harga akhir
+        disepakati setelah detail pekerjaan dikonfirmasi admin.</p>
+      </details>
+
+      <details>
+        <summary>Apakah saya bisa mengirim foto referensi?</summary>
+        <p>Bisa. Pilih foto pada formulir, kemudian lampirkan
+        foto tersebut secara manual di chat WhatsApp.</p>
+      </details>
+
+      <details>
+        <summary>Apakah pesanan langsung tersimpan di dashboard?</summary>
+        <p>Pesanan disimpan di browser perangkat yang digunakan.
+        Untuk menerima dan melihat pesanan dari berbagai perangkat
+        secara terpusat, dibutuhkan backend atau database online.</p>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ADMIN -->
+
+<section class="admin-section" id="admin">
+  <div class="section-wrap">
+    <div class="section-head">
+      <h2>ADMIN <span>DASHBOARD</span></h2>
+      <p>Kelola catatan order yang tersimpan pada browser ini.</p>
+    </div>
+
+    <div class="admin-box">
+      <div id="adminLogin" class="admin-login">
+        <label for="pinAdmin">PIN Admin</label>
+        <input id="pinAdmin" type="password"
+          inputmode="numeric" placeholder="Masukkan PIN admin">
+
+        <button class="btn full" style="margin-top:12px"
+          onclick="loginAdmin()">Masuk Dashboard</button>
+
+        <p class="form-note">
+          PIN awal: 2468. Ganti ADMIN_PIN pada kode sebelum dipublikasikan.
+        </p>
+        <p id="loginError" class="form-note"></p>
+      </div>
+
+      <div id="adminDashboard" class="hidden">
+        <h3>Daftar Pesanan Lokal</h3>
+        <p class="admin-status" id="jumlahOrder"></p>
+
+        <div class="admin-tools">
+          <button class="btn btn-outline btn-small"
+            onclick="eksporOrder()">⬇ Ekspor Data JSON</button>
+
+          <button class="btn danger btn-small"
+            onclick="hapusSemuaOrder()">Hapus Semua Order</button>
+
+          <button class="btn btn-outline btn-small"
+            onclick="logoutAdmin()">Keluar</button>
+        </div>
+
+        <div id="daftarOrder" class="admin-orders"></div>
+
+        <p class="form-note">
+          Catatan: dashboard ini hanya membaca data dari localStorage
+          browser ini. PIN di sisi klien bukan sistem keamanan yang kuat.
+          Jangan menyimpan informasi sensitif di sini.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">ADIT <span>DESIGN.</span></div>
+  <p>Creative Design • Gaming • Editing</p>
+  <p>WhatsApp: +62 877-7147-5645</p>
+  <p style="margin-top:12px">© 2026 ADIT DESIGN. All Rights Reserved.</p>
+  <p><a href="#admin">Admin</a> · <a href="#home">Kembali ke atas ↑</a></p>
+</footer>
+
+<a class="wa-float"
+  href="https://wa.me/6287771475645?text=Halo%20ADIT%20DESIGN"
+  target="_blank" rel="noopener"
+  aria-label="Chat WhatsApp">☏</a>
+
+<script>
+// ======================================
+// PENGATURAN WEBSITE
+// ======================================
+
+const NOMOR_WA = "6287771475645";
+
+// Ganti PIN ini sebelum mempublikasikan website.
+// PIN ini hanya pengunci tampilan, bukan keamanan server.
+const ADMIN_PIN = "2468";
+
+const STORAGE_KEY = "adit_design_orders_v1";
+
+let fotoReferensi = null;
+
+// ======================================
+// PILIH LAYANAN
+// ======================================
+
+function pilih(namaLayanan) {
+  document.getElementById("layananPilih").value = namaLayanan;
+  document.getElementById("order").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+// ======================================
+// UPLOAD & PREVIEW FOTO
+// ======================================
+
+const inputFoto = document.getElementById("referensi");
+const previewFoto = document.getElementById("preview");
+const hapusFotoBtn = document.getElementById("hapusFoto");
+
+inputFoto.addEventListener("change", function() {
+  const file = this.files[0];
+
+  fotoReferensi = null;
+  previewFoto.style.display = "none";
+  hapusFotoBtn.classList.add("hidden");
+
+  if (!file) return;
+
+  const formatDiizinkan = [
+    "image/jpeg",
+    "image/png",
+    "image/webp"
+  ];
+
+  if (!formatDiizinkan.includes(file.type)) {
+    alert("Pilih file JPG, PNG, atau WebP.");
+    this.value = "";
+    return;
+  }
+
+  if (file.size > 5 * 1024 * 1024) {
+    alert("Ukuran foto maksimal 5 MB.");
+    this.value = "";
+    return;
+  }
+
+  fotoReferensi = file;
+
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+    previewFoto.src = e.target.result;
+    previewFoto.style.display = "block";
+    hapusFotoBtn.classList.remove("hidden");
+  };
+
+  reader.readAsDataURL(file);
+});
+
+hapusFotoBtn.addEventListener("click", function() {
+  inputFoto.value = "";
+  fotoReferensi = null;
+  previewFoto.removeAttribute("src");
+  previewFoto.style.display = "none";
+  hapusFotoBtn.classList.add("hidden");
+});
+
+// ======================================
+// SIMPAN DATA ORDER LOKAL
+// ======================================
+
+function ambilOrder() {
+  try {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    return Array.isArray(data) ? data : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function simpanOrder(data) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    return true;
+  } catch (e) {
+    alert("Pesanan tidak bisa disimpan di browser ini. "
+      + "Coba gunakan browser biasa dan periksa ruang penyimpanan.");
+    return false;
+  }
+}
+
+// ======================================
+// KIRIM ORDER KE WHATSAPP
+// ======================================
+
+document.getElementById("orderForm").addEventListener("submit",
+function(e) {
+  e.preventDefault();
+
+  const nama = document.getElementById("nama").value.trim();
+  const layanan = document.getElementById("layananPilih").value;
+  const detail = document.getElementById("detail").value.trim();
+  const budget = document.getElementById("budget").value;
+
+  if (!nama || !layanan || !detail || !budget) {
+    alert("Lengkapi semua kolom wajib.");
+    return;
+  }
+
+  const order = {
+    id: Date.now(),
+    tanggal: new Date().toLocaleString("id-ID"),
+    nama: nama,
+    layanan: layanan,
+    detail: detail,
+    budget: budget,
+    foto: fotoReferensi ? fotoReferensi.name : "Tidak ada",
+    status: "Menunggu konfirmasi"
+  };
+
+  // Simpan salinan pesanan pada browser ini.
+  const semuaOrder = ambilOrder();
+  semuaOrder.unshift(order);
+
+  const tersimpan = simpanOrder(semuaOrder);
+
+  if (tersimpan && !document.getElementById("adminDashboard")
+      .classList.contains("hidden")) {
+    tampilkanOrder();
+  }
+
+  const pesan = [
+    "HALO ADIT DESIGN! 🎨",
+    "",
+    "Saya ingin memesan jasa edit.",
+    "",
+    "Nama: " + nama,
+    "Layanan: " + layanan,
+    "Detail pesanan: " + detail,
+    "Budget: " + budget,
+    "Foto referensi: " + (fotoReferensi
+      ? fotoReferensi.name + " (akan dilampirkan manual)"
+      : "Tidak ada"),
+    "",
+    "Mohon konfirmasi harga dan waktu pengerjaan.",
+    "Terima kasih!"
+  ].join("\n");
+
+  const url = "https://wa.me/" + NOMOR_WA
+    + "?text=" + encodeURIComponent(pesan);
+
+  const jendelaWA = window.open(url, "_blank");
+
+  // Jika browser memblokir tab baru, tetap tampilkan tautannya.
+  if (!jendelaWA) {
+    alert("Browser memblokir pembukaan WhatsApp. "
+      + "Tekan OK untuk membuka WhatsApp.");
+    window.location.href = url;
+  }
+});
+
+// ======================================
+// LOGIN DASHBOARD ADMIN
+// ======================================
+
+function loginAdmin() {
+  const pin = document.getElementById("pinAdmin").value;
+  const error = document.getElementById("loginError");
+
+  if (pin === ADMIN_PIN) {
+    document.getElementById("adminLogin").classList.add("hidden");
+    document.getElementById("adminDashboard").classList.remove("hidden");
+    error.textContent = "";
+    tampilkanOrder();
+  } else {
+    error.textContent = "PIN salah. Silakan coba lagi.";
+  }
+}
+
+function logoutAdmin() {
+  document.getElementById("adminDashboard").classList.add("hidden");
+  document.getElementById("adminLogin").classList.remove("hidden");
+  document.getElementById("pinAdmin").value = "";
+}
+
+// ======================================
+// TAMPILKAN ORDER DI DASHBOARD
+// ======================================
+
+function tampilkanOrder() {
+  const daftar = document.getElementById("daftarOrder");
+  const orders = ambilOrder();
+
+  document.getElementById("jumlahOrder").textContent =
+    "Total catatan pesanan: " + orders.length;
+
+  daftar.replaceChildren();
+
+  if (orders.length === 0) {
+    const kosong = document.createElement("p");
+    kosong.className = "admin-status";
+    kosong.textContent = "Belum ada pesanan tersimpan di browser ini.";
+    daftar.appendChild(kosong);
+    return;
+  }
+
+  orders.forEach(function(order) {
+    const kartu = document.createElement("article");
+    kartu.className = "order-record";
+
+    const judul = document.createElement("strong");
+    judul.textContent = order.nama + " — " + order.layanan;
+    kartu.appendChild(judul);
+
+    function tambahBaris(label, value) {
+      const p = document.createElement("p");
+      const b = document.createElement("strong");
+      b.textContent = label + ": ";
+      p.appendChild(b);
+      p.appendChild(document.createTextNode(String(value || "-")));
+      kartu.appendChild(p);
+    }
+
+    tambahBaris("Tanggal", order.tanggal);
+    tambahBaris("Detail", order.detail);
+    tambahBaris("Budget", order.budget);
+    tambahBaris("Foto", order.foto);
+    tambahBaris("Status", order.status);
+
+    const hapus = document.createElement("button");
+    hapus.className = "btn danger btn-small";
+    hapus.style.marginTop = "12px";
+    hapus.textContent = "Hapus Pesanan";
+
+    hapus.addEventListener("click", function() {
+      if (!confirm("Hapus catatan pesanan ini?")) return;
+
+      const terbaru = ambilOrder().filter(function(item) {
+        return item.id !== order.id;
+      });
+
+      if (simpanOrder(terbaru)) tampilkanOrder();
+    });
+
+    kartu.appendChild(hapus);
+    daftar.appendChild(kartu);
+  });
+}
+
+// ======================================
+// EKSPOR ORDER SEBAGAI FILE JSON
+// ======================================
+
+function eksporOrder() {
+  const data = ambilOrder();
+
+  const blob = new Blob(
+    [JSON.stringify(data, null, 2)],
+    { type: "application/json" }
+  );
+
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = "adit-design-orders.json";
+  link.click();
+
+  setTimeout(function() {
+    URL.revokeObjectURL(url);
+  }, 1000);
+}
+
+// ======================================
+// HAPUS SEMUA CATATAN ORDER
+// ======================================
+
+function hapusSemuaOrder() {
+  if (!confirm("Yakin ingin menghapus SEMUA catatan order lokal?")) {
+    return;
+  }
+
+  if (simpanOrder([])) {
+    tampilkanOrder();
+  }
+}
+</script>
+
+</body>
+</html>
